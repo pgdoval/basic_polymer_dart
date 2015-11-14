@@ -1,0 +1,44 @@
+<link rel="import" href="../../../packages/polymer/polymer.html">
+<link rel="import" href="../../../packages/web_components/web_components.dart">
+
+<polymer-element name="my-polymer-element">
+
+    <template>
+        <style>
+            *{
+
+                height: 45px;
+                line-height: 45px;
+                font-size:15pt;
+            }
+
+            #new-word
+            {
+                width: 200px;
+            }
+            #add-word
+            {
+                width: 100px;
+            }
+
+
+        </style>
+
+
+
+        <input type="text" id="new-word" value="{{newWord}}"/>
+
+        <input type="button" id="add-word" on-click="{{addWord}}" value="Añadir"/>
+
+        <ul>
+            <template repeat="{{ sentence in sentences }}">
+                <li>{{sentence}}</li>
+            </template>
+        </ul>
+    </template>
+
+    <script type = "application/dart"
+            src = my_polymer_element.dart>
+    </script>
+
+</polymer-element>
